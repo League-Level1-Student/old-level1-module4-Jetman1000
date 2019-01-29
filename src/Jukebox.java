@@ -4,6 +4,8 @@
  */
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -11,7 +13,10 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -19,8 +24,17 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
 /* 1. Download the JavaZoom jar from here: http://bit.ly/javazoom
  * 2. Right click your project and add it as an External JAR (Under Java Build Path > Libraries).*/
 
-public class Jukebox implements Runnable {
+public class Jukebox implements Runnable, ActionListener {
+JFrame frame= new JFrame();
+JPanel panel= new JPanel();
+JLabel label= new JLabel();
+JButton button= new JButton("Chain Smokers");
+JButton button2= new JButton("?");
+JButton button3= new JButton("Havana");
 
+Song s=new Song("song.mp3");
+Song s1=new Song ("deeznuts.mp3");
+Song s2= new Song ("Havana.mp3");
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Jukebox());
 	}
@@ -28,23 +42,54 @@ public class Jukebox implements Runnable {
            public void run() {
 
 		// 3. Find an mp3 on your computer or on the Internet.
+        	   
 		// 4. Create a Song
-
+        	  
 		// 5. Play the Song
-
+//s.play();
 		/*
 		 * 6. Create a user interface for your Jukebox so that the user can to
-		 * choose which song to play. You can use can use a different button for
+		 * choose which song to play. You can use a different button for
 		 * each song, or a picture of the album cover. When the button or album
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+
+
+frame.setVisible(true);
+frame.add(panel);
+panel.add(label);
+panel.add(button);
+panel.add(button2);
+panel.add(button3);
+button.addActionListener(this);
+button2.addActionListener(this);
+button3.addActionListener(this);
+frame.pack();
+
           }
 	/* Use this method to add album covers to your Panel. */
 	private JLabel loadImage(String fileName) {
 		URL imageURL = getClass().getResource(fileName);
 		Icon icon = new ImageIcon(imageURL);
 		return new JLabel(icon);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		JButton clicked = (JButton)e.getSource();
+		
+		if(clicked == button) {
+			
+			s.play();
+		}
+		if(clicked == button2) {
+			s1.play();
+		}
+		if(clicked == button3) {
+			s2.play();
+		}
 	}
 
 }
