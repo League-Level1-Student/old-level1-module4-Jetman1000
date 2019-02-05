@@ -25,6 +25,7 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
  * 2. Right click your project and add it as an External JAR (Under Java Build Path > Libraries).*/
 
 public class Jukebox implements Runnable, ActionListener {
+	
 JFrame frame= new JFrame();
 JPanel panel= new JPanel();
 JLabel label= new JLabel();
@@ -81,13 +82,18 @@ frame.pack();
 		JButton clicked = (JButton)e.getSource();
 		
 		if(clicked == button) {
-			
+			s1.stop();
+			s2.stop();
 			s.play();
 		}
 		if(clicked == button2) {
+			s.stop();
+			s2.stop();
 			s1.play();
 		}
 		if(clicked == button3) {
+			s.stop();
+			s1.stop();
 			s2.play();
 		}
 	}
