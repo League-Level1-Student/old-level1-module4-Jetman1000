@@ -4,6 +4,7 @@
  */
 
 
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
@@ -86,12 +87,28 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println(e.getX() + "     " + e.getY());
-		JLabel Label= mp.loadImageFromHardDrive("hand.png");
+		//System.out.println(e.getX() + "     " + e.getY());
 		JFrame frame=new JFrame();
-		frame.add(Label);
-		}
 		
+	frame.setVisible(true);
+	int color=backgroundImage.getRGB(e.getX(), e.getY());
+	Color c = new Color(color);
+	System.out.println(c);
+	if(c.equals(new Color(223, 192, 125))) {
+		
+		frame.add(mp.loadImageFromWithinProject("hand.png"));
+		frame.pack();
+	}
+	if(c.equals(new Color(191, 154, 102))) {
+		mp.playMusicOnComputer("Waterfall.mp3");
+	}
+	if(c.equals(new Color(188, 176, 126))) {
+		frame.add(mp.loadImageFromWithinProject("SpyWhite.jpg"));
+		frame.pack();
+		
+		//fix me
+	}
+	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
