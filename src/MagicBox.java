@@ -99,14 +99,14 @@ public class MagicBox extends JPanel implements Runnable, MouseListener {
 		frame.add(mp.loadImageFromWithinProject("hand.png"));
 		frame.pack();
 	}
-	if(c.equals(new Color(191, 154, 102))) {
+	if(c.equals(new Color(104, 194, 182))) {
 		mp.playMusicOnComputer("Waterfall.mp3");
 	}
-	if(c.equals(new Color(188, 176, 126))) {
+	if(c.equals(new Color(172, 161, 116))) {
 		frame.add(mp.loadImageFromWithinProject("SpyWhite.jpg"));
 		frame.pack();
 		
-		//fix me
+		
 	}
 	}
 
