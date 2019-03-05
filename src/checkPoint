@@ -1,0 +1,23 @@
+	1) JButton
+	   JFrame v                                                                                  
+	   JPanel
+	   JLabel
+	   JTextField
+	   
+	   
+	   
+	   
+	 2) mouseMotionListener
+	    actionListener
+	    mouseListener
+	    keyListener
+	    
+	    
+	    
+	 4) .addkeyListener
+	    .addActionListener
+	    .addmousePressedListener
+	    
+	    
+	 5) amazingButton.addActionListener(this);
+	    myFrame.addMouseActionListener(this);

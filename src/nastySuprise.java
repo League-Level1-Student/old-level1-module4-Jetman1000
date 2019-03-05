@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class nastySuprise implements ActionListener {
 	JFrame frame = new JFrame();
@@ -25,6 +26,7 @@ public class nastySuprise implements ActionListener {
 		panel.add(button2);
 
 		button.addActionListener(this);
+
 		button2.addActionListener(this);
 		frame.setVisible(true);
 		frame.pack();
