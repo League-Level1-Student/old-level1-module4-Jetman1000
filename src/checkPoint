@@ -21,3 +21,34 @@
 	    
 	 5) amazingButton.addActionListener(this);
 	    myFrame.addMouseActionListener(this);
+	    
+	    
+	    
+	    
+	    
+	    
+	    ---------------------------------------------------------------
+	    
+	   int findLargestNumber(int y, int x){
+	    if(y>x){
+	    return y;
+	   }else
+	   return x;
+	   
+	   } 
+	}
+	    
+	   --------------------------------------------------------------- 
+	    
+	    
+	    double rounding(double x){
+	   
+	   
+	   
+	 }
+	    
+	    
+	    
+	    
+	    
+	    

@@ -32,7 +32,7 @@ JLabel label= new JLabel();
 JButton button= new JButton("Chain Smokers");
 JButton button2= new JButton("?");
 JButton button3= new JButton("Havana");
-J
+
 
 Song s=new Song("song.mp3");
 Song s1=new Song ("deeznuts.mp3");
