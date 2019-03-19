@@ -8,7 +8,5 @@ public class Animal {
 		System.out.println(name);
 	}
 	
-	JFrame frame=new JFrame();
-	JPanel panel=new panel();
-	JTextField text= new text();
+
 }
